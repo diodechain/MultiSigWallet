@@ -95,6 +95,7 @@
     "growl": "^1.10.5",
     "grunt": "1.0.0",
     "grunt-contrib-jshint": "1.1.0",
+    "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "1.0.0",
     "grunt-eslint": "19.0.0",
     "grunt-minified": "0.0.6",

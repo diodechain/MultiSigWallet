@@ -110,6 +110,17 @@ module.exports = function(grunt) {
           cmd: "run"
         }
       }
+    },
+    less: {
+      bootstrap: {
+        options: {
+          paths: ['./']
+        },
+        files: {
+          'css/gnosis-bootstrap-dialog.css': 'less/bootstrap-dialog.less',
+          'css/gnosis-bootstrap.css': 'less/bootstrap.less'
+        }
+      },
     }
   });
 
@@ -122,6 +133,7 @@ module.exports = function(grunt) {
   // Load the plugin that provides the http server.
   grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-angular-templates');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-npm-command');
@@ -188,8 +200,16 @@ module.exports = function(grunt) {
 
     const standaloneFonts = [
       {
+        'name': 'fontawesome-webfont.woff',
+        'path': 'node_modules/font-awesome/fonts/fontawesome-webfont.woff',
+      },
+      {
         'name': 'fontawesome-webfont.woff2',
         'path': 'node_modules/font-awesome/fonts/fontawesome-webfont.woff2',
+      },
+      {
+        'name': 'fontawesome-webfont.ttf',
+        'path': 'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
       }
     ];
 
@@ -264,9 +284,11 @@ module.exports = function(grunt) {
 
     // Copy standalone Fonts
     for (let x in standaloneFonts) {
-      console.log("Copying " + standaloneFonts[x].path + "into fonts/" + standaloneFonts[x].name);
+      let src = standaloneFonts[x].path
+      let dst = fontsStandaloneDirPath + '/' + standaloneFonts[x].name
+      console.log("Copying " + src + " into fonts/" + dst);
       // fs.copyFileSync(src, dest)
-      fs.copyFileSync(standaloneFonts[x].path, fontsStandaloneDirPath + '/' + standaloneFonts[x].name)
+      fs.createReadStream(src).pipe(fs.createWriteStream(dst));
     }
 
   })
