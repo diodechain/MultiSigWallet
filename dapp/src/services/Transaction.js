@@ -334,6 +334,11 @@
                 data.etherscan = "https://rinkeby.etherscan.io";
                 data.walletFactoryAddress = txDefault.walletFactoryAddresses["rinkeby"].address;
               }
+              else if (block && block.hash == "0xd4fcb22233aebe11cf8056b63ca54f8daa82e16fdccb33d5df0e4394b36b7376") {
+                data.chain = "diode";
+                data.etherscan = "https://diode.io/prenet/";
+                data.walletFactoryAddress = txDefault.walletFactoryAddresses["diode"].address;
+              }
               else {
                 data.chain = "privatenet";
                 data.etherscan = "https://testnet.etherscan.io";

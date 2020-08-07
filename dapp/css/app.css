@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400);
+
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
@@ -20,12 +22,18 @@ html {
 }
 
 body {
-    padding-top: 70px;
-    background-image: url(../img/gnosis-logo.svg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/diode-logo.svg);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 512px;
     background-attachment: fixed;
+}
+
+.container {
+  flex-grow: 1;
 }
 
 .navbar-brand > img {
@@ -164,21 +172,29 @@ input[name="editable-select"]:disabled {
 }
 
 .imprint{
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
-  width: 100vw;
-  background: #182a36;
+  background: #202020;
   padding: 0;
   text-align: center;
 }
 .imprint a{
-  color: white;
+  color: #f15c2e;
+  text-decoration: none;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.navbar {
+  text-transform: uppercase;
 }
 
 ::selection {
-  background: #b3c3ce;
-  }
+  background: #5e5e5e;
+}
 
 .safe-migration-btn {
   background: #1ba5c2;

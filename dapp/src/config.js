@@ -11,8 +11,8 @@ var txDefaultOrig =
     "imprint": "https://wallet.gnosis.pm/imprint.html"
   },
   gasLimit: 3141592,
-  gasPrice: 18000000000,
-  ethereumNode: "https://mainnet.infura.io:443",
+  gasPrice: 0,
+  ethereumNode: "https://testnet.diode.io:8443",
   connectionChecker: {
     method : "OPTIONS",
     url : "https://www.google.com",
@@ -25,7 +25,7 @@ var txDefaultOrig =
     checkInterval: 15000
   },
   wallet: "injected",
-  defaultChainID: null,
+  defaultChainID: 41043,
   // Mainnet
   walletFactoryAddress: "0x6e95c8e8557abc08b46f3c347ba06f8dc012763f",
   tokens: [
@@ -141,20 +141,8 @@ if (isElectron) {
 var txDefault = {
   ethereumNodes : [
     {
-      url : "https://mainnet.infura.io:443",
-      name: "Remote Mainnet"
-    },
-    {
-      url : "https://ropsten.infura.io:443",
-      name: "Remote Ropsten"
-    },
-    {
-      url : "https://kovan.infura.io:443",
-      name: "Remote Kovan"
-    },
-    {
-      url : "https://rinkeby.infura.io:443",
-      name: "Remote Rinkeby"
+      url : "https://testnet.diode.io:8443",
+      name: "Remote Diode Prenet"
     },
     {
       url : "http://localhost:8545",
@@ -177,6 +165,10 @@ var txDefault = {
     'rinkeby': {
       name: 'Rinkeby',
       address: '0x19ba60816abca236baa096105df09260a4791418'
+    },
+    'diode': {
+      name: 'Diode Prenet',
+      address: '0x0000000000000000000000000000000000000000'
     },
     'privatenet': {
       name: 'Privatenet',

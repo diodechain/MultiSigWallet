@@ -39,10 +39,10 @@
   color: #333;
 }
 .bootstrap-dialog.type-info .modal-header {
-  background-color: #5bc0de;
+  background-color: #2d3e50;
 }
 .bootstrap-dialog.type-primary .modal-header {
-  background-color: #337ab7;
+  background-color: #ee4410;
 }
 .bootstrap-dialog.type-success .modal-header {
   background-color: #5cb85c;

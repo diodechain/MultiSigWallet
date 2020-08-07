@@ -3,73 +3,70 @@
 // --------------------------------------------------
 
 //== Gnosis theme colors
-@gnosis-extreme-dark-blue:     #152630;
-@gnosis-very-dark-blue:        #182a36;
-@gnosis-dark-blue:             #1c313f;
-@gnosis-blue:                  #1f3747;
-@gnosis-light-blue:            #143e4d;
-@gnosis-very-light-blue:       #2b4c62;
-@gnosis-extreme-light-blue:    #1f7692;
-@gnosis-ultra-light-blue:      #00a6c4;
-@gnosis-light-grey:            #b3c3ce;
+@gnosis-extreme-dark-blue:   #152630;
+@diode-navbar-blue:          #2d3e50;
+@gnosis-dark-blue:           #1c313f;
+@diode-background-bright:    #fff;
+@gnosis-very-light-blue:     #2b4c62;
+@diode-navigation-link:      #fff;
+@diode-brand-orange:         #f15c2e;
+@diode-text-gray:            #5e5e5e;
 
 
 // Background
-@gnosis-body-bg: @gnosis-blue;
+@gnosis-body-bg: @diode-background-bright;
 
 // Page header
-@gnosis-page-header-border-color:       @gnosis-light-blue;
+@gnosis-page-header-border-color:       @diode-brand-orange;
 
 // Links & Text
-@gnosis-text-color:                     @gnosis-light-grey;
-@gnosis-link-color: @gnosis-extreme-light-blue;
-@gnosis-link-hover-color: @gnosis-ultra-light-blue;
+@gnosis-text-color:                     @diode-text-gray;
+@gnosis-link-hover-color: @diode-brand-orange;
 
 // Button
-@gnosis-btn-default-bg:                 @gnosis-light-blue;
+@gnosis-btn-default-bg:                 @diode-brand-orange;
 
 // Pagination
-@gnosis-pagination-bg:                  @gnosis-light-blue;
+@gnosis-pagination-bg:                  @diode-brand-orange;
 @gnosis-pagination-hover-bg: @gnosis-extreme-dark-blue;
 @gnosis-pagination-active-bg: @gnosis-extreme-dark-blue;
 @gnosis-pagination-disabled-bg: @gnosis-extreme-dark-blue;
 
 // Input
-@gnosis-input-bg: @gnosis-light-blue;
+@gnosis-input-bg: @diode-brand-orange;
 @gnosis-input-bg-disabled: @gnosis-extreme-dark-blue;
 
 // Dropdown
-@gnosis-dropdown-bg: @gnosis-very-dark-blue;
-@gnosis-dropdown-link-color:       @gnosis-link-color;
-@gnosis-dropdown-link-hover-color: @gnosis-ultra-light-blue;
-@gnosis-dropdown-link-hover-bg: @gnosis-light-blue;
+@gnosis-dropdown-bg: @diode-navbar-blue;
+@gnosis-dropdown-link-color:       @diode-navigation-link;
+@gnosis-dropdown-link-hover-color: @diode-brand-orange;
+@gnosis-dropdown-link-hover-bg: @diode-brand-orange;
 
 // Modal
-@gnosis-modal-content-bg:          @gnosis-blue;
-@gnosis-modal-header-border-color: @gnosis-light-blue;
+@gnosis-modal-content-bg:          @diode-background-bright;
+@gnosis-modal-header-border-color: @diode-brand-orange;
 
 // Nav
-@gnosis-navbar-default-color:       @gnosis-light-grey;
-@gnosis-navbar-default-bg: @gnosis-very-dark-blue;
-@gnosis-navbar-default-border:      @gnosis-light-blue;
+@gnosis-navbar-default-color:       @diode-text-gray;
+@gnosis-navbar-default-bg:          @diode-navbar-blue;
+@gnosis-navbar-default-border:      @diode-brand-orange;
 
 // Navbar links
-@gnosis-navbar-default-link-color:            @gnosis-link-color;
-@gnosis-navbar-default-link-hover-color: @gnosis-ultra-light-blue;
-@gnosis-navbar-default-link-active-color: @gnosis-ultra-light-blue;
+@gnosis-navbar-default-link-color:        @diode-navigation-link;
+@gnosis-navbar-default-link-hover-color:  @diode-brand-orange;
+@gnosis-navbar-default-link-active-color: @diode-brand-orange;
 
 // Panel
-@gnosis-panel-bg:                       @gnosis-blue;
+@gnosis-panel-bg:                       @diode-background-bright;
 @gnosis-panel-inner-border: @gnosis-very-light-blue;
 @gnosis-panel-footer-bg: @gnosis-very-light-blue;
 @gnosis-panel-default-border: @gnosis-very-light-blue;
 @gnosis-panel-default-heading-bg: @gnosis-very-light-blue;
-@gnosis-panel-default-text:             @gnosis-light-grey;
 
 // Table
 @gnosis-table-bg:                       transparent;
 @gnosis-table-bg-accent: @gnosis-dark-blue;
-@gnosis-table-bg-hover: @gnosis-very-dark-blue;
+@gnosis-table-bg-hover: @diode-navbar-blue;
 @gnosis-table-bg-active:                @gnosis-table-bg-hover;
 @gnosis-table-border-color: @gnosis-very-light-blue;
 
@@ -85,9 +82,9 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:         darken(@diode-brand-orange, 6.5%); // #337ab7
 @brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
+@brand-info:            @diode-navbar-blue;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
@@ -102,24 +99,24 @@
 @text-color: @gnosis-text-color;
 
 //** Global textual link color.
-@link-color: @gnosis-link-color;
+@link-color: @diode-brand-orange;
 //** Link hover color set via `darken()` function.
-@link-hover-color: @gnosis-link-hover-color;
+@link-hover-color: lighten(@diode-brand-orange, 15%);
 //** Link hover decoration.
-@link-hover-decoration: underline;
+@link-hover-decoration: none;
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Titillium Web", Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          17px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -784,7 +781,7 @@
 @panel-inner-border:          @gnosis-panel-inner-border;
 @panel-footer-bg:             @gnosis-panel-footer-bg;
 
-@panel-default-text:          @gnosis-panel-default-text;
+@panel-default-text:          @diode-navigation-link;
 @panel-default-border:        @gnosis-panel-default-border;
 @panel-default-heading-bg:    @gnosis-panel-default-heading-bg;
 
